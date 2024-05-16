@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ENVIAR PARÁMETROS</title>
 </head>
 <body>
+<h1> Ir al servlet</h1>
+<a href="Servlet">ir al servlet</a>
 
+
+<form action="ServletParametros" method="get">
+    <label for="Nombre">Nombre:</label>
+    <input type="text" id="Nombre" name="Nombre"><br><br>
+    <label for="Edad">Edad:</label>
+    <input type="int" id="Edad" name="Edad"><br><br>
+    <label for="Apellido"> Apellido:</label>
+    <input type="text" id="Apellido" name="Apellido"> <br><br>
+    <input type="submit" value="Enviar">
+</form>
 </body>
 </html>
