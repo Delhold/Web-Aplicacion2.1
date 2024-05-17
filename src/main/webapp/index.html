@@ -2,21 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ENVIAR PARÁMETROS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Incluir Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Incluir jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
+    <style>
+        /* Estilos para hacer el formulario responsive */
+        /* Puedes personalizar estos estilos según tus preferencias */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para los campos del formulario */
+        form input[type="text"],
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para el botón de enviar */
+        form input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilos para las etiquetas */
+        form label {
+            font-weight: bold;
+        }
+
+        /* Estilos para las filas del formulario */
+        form .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Media query para dispositivos móviles */
+        @media screen and (max-width: 600px) {
+            form {
+                width: 90%;
+            }
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="int"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+
+
+    </style>
 </head>
 <body>
-<h1> Ir al servlet</h1>
-<a href="Servlet">ir al servlet</a>
+<h2 class="text-center"> Formulario </h2>
 
 
-<form action="ServletParametros" method="get">
+
+<form action="ServletParametros" method="post">
     <label for="Nombre">Nombre:</label>
     <input type="text" id="Nombre" name="Nombre"><br><br>
     <label for="Edad">Edad:</label>
     <input type="int" id="Edad" name="Edad"><br><br>
     <label for="Apellido"> Apellido:</label>
     <input type="text" id="Apellido" name="Apellido"> <br><br>
-    <input type="submit" value="Enviar">
+    <label for="Curso"> Curso:</label>
+    <input type="text" id="Curso" name="Curso"> <br><br>
+    <div>
+    <label>Género:</label>
+        <label for="Masculino">Masculino</label>
+        <input type="radio" id="Masculino" name="Genero" value="Masculino">
+        <label for="Femenino">Femenino</label>
+        <input type="radio" id="Femenino" name="Genero" value="Femenino">
+        <label for="No-binary">No-binary</label>
+        <input type="radio" id="No-binary" name="Genero" value="No-binary">
+
+    </div>
+    <div class="form-group">
+        <label for="Programas">Lenguajes de Programacion:</label>
+        <select id="programas" name="Programas" required>
+            <option value="">Selecciona</option>
+            <option value="C++">C++</option>
+            <option value="C-shark">Cshark</option>
+            <option value="Java">Java</option>
+            <option value="Python">python</option>
+        </select>
+        <label for="Descripcion">Descripcion:</label>
+        <textarea  id="Descripcion" name="Descripcion" rows="5" cols="55"></textarea>
+    </div>
+    <button class="btn btn-secondary" type="reset">Eliminar</button>
+    <button class="btn btn-secondary" type="submit" value="Enviar">Enviar</button>
+
+
+
 </form>
 </body>
 </html>
